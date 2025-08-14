@@ -21,5 +21,17 @@ from typing import List
 
 class Solution:
     def findRepeatedDnaSequences(self, s: str) -> List[str]:
-        pass
+        if len(s) < 10:
+            return []
+        result = set()
+        countered = set()
+        windowSize = 10
+        for i in range(0, len(s) - windowSize  + 1):
+            sub = s[i:i + windowSize]
+            if sub in countered:
+                result.add(sub)
+            else:
+                countered.add(sub)
+        return list(result)
 
+print(Solution().findRepeatedDnaSequences("AAAAAAAAAAA"))

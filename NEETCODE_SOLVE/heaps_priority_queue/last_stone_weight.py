@@ -1,4 +1,4 @@
-#https://neetcode.io/problems/last-stone-weight?list=neetcode150
+# https://neetcode.io/problems/last-stone-weight?list=neetcode150
 # Difficulty: Easy
 # this is just mostly to use the bulit in library, get used to the heapq library
 # You are given an array of integers stones where stones[i] represents the weight of the ith stone.
@@ -21,10 +21,6 @@ class Solution_Our:
 
     def lastStoneWeight(self, stones: List[int]) -> int:
         # create a max heap
-        heapq.heapify(stones)
+        heapq._heapify_max(stones)
         while len(stones) > 1:
-            print()
-            
-        
-        
-        
+            biggest = heapq._heappop_max()

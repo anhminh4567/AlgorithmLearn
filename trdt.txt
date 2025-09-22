@@ -1,0 +1,2 @@
+deque : queue , pop(), pop_left(), append(), append_left()
+heapq : heapq.heapify(), heapq.nlargest(), heapq.heappush(), heapq.heappop()
